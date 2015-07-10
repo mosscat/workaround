@@ -1,0 +1,12 @@
+*
+
+# except
+!/.gitignore
+
+# zsh
+!.zshrc
+
+# vim
+!.vimrc
+
+
