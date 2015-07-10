@@ -39,6 +39,8 @@ Plugin 'sjl/gundo.vim'
 
 call vundle#end() 
 
+let NERDTreeShowHidden=1
+
 map <C-e> <plug>NERDTreeTabsToggle<CR>
 " map <C-e> :NERDTreeTabsToggle<CR>
 
