@@ -5,8 +5,16 @@
 
 # zsh
 !.zshrc
+!.zsh
+!.zsh/*
 
 # vim
 !.vimrc
+!.vim
+!.vim/*
+.vim/bundle/
+!.vim/bundle/Vundle.vim
+!.vim/bundle/Vundle.vim/
+
 
 
