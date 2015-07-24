@@ -258,7 +258,7 @@ grmlcomp() {
 is4 && grmlcomp
 
 export LANG='ru_RU.UTF-8'
-export LC_ALL=C
+export LC_ALL='en_US.UTF-8'
 export LC_MESSAGES=C
 export TERM='xterm-256color'
 
