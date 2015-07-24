@@ -22,6 +22,8 @@ fi
 #git
 alias gpac="git pull && git add -A . && git commit -m "
 
+alias s="screen"
+
 setopt append_history
 setopt extended_history
 setopt histignorespace

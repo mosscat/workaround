@@ -18,5 +18,5 @@
 !.vim/bundle/Vundle.vim/
 !.vim/bundle/Vundle.vim/*
 
-
+.vim/.ycm_extra_conf.pyc
 
