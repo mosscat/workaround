@@ -91,6 +91,10 @@ endif
 map [1;5A :cp<Cr>zvzz:cc<Cr>
 " C-Down
 map [1;5B :cn<Cr>zvzz:cc<Cr>
+" C-Left
+map [1;5D :bNext<Cr>
+" C-Right
+map [1;5C :bnext<Cr>
 
 map <F4> :A<Cr>
 
@@ -123,13 +127,15 @@ nmap <C-a> :YcmDiags<CR>
 
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 let g:ycm_extra_conf_globlist = ['~/dev/*','!~/*']
+let g:ycm_add_preview_to_completeopt = 0
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
 
-nmap  :!<CR>
+" nmap  :!<CR>
 set pastetoggle=<F2>
 
 let g:UltiSnipsExpandTrigger="<c-z>"

@@ -257,5 +257,6 @@ grmlcomp() {
 
 is4 && grmlcomp
 
+export LC_ALL='ru_RU.UTF-8'
 export TERM='xterm-256color'
 
