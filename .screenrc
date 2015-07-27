@@ -1,0 +1,6 @@
+hardstatus alwayslastline '%{= kg}[ %{G}%H %{g}][%= %{= kB}%?%-Lw%?%{+b r}(%{G}%n*%f %t%?(%u)%?%{r})%{-b B}%?%+Lw%?%?%= %{g}%]'
+
+bindkey ^[[1;6C next
+bindkey ^[[1;6D prev
+
+defscrollback 10000
