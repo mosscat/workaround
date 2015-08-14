@@ -25,25 +25,39 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 Plugin 'tpope/vim-fugitive' 		" Git integration
-" Plugin 'SkidanovAlex/CtrlK'		    " Find references
 
 Plugin 'bling/vim-airline'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 
-" Plugin 'tpope/vim-dispatch'
-" Plugin 'mhinz/vim-startify'
-
 Plugin 'sjl/gundo.vim'
 
+Plugin 'oplatek/Conque-Shell'
+Plugin 'majutsushi/tagbar'
+
 call vundle#end() 
+
+fun! CmdAlias(from, to)
+    exec 'cnoreabbrev <expr> '.a:from
+        \ .' ((getcmdtype() is# ":" && getcmdline() is# "'.a:from.'")'
+        \ .'? ("'.a:to.'") : ("'.a:from.'"))'
+endfun
+
+call CmdAlias( "W", "w")
+call CmdAlias( "Q", "q")
+call CmdAlias( "ct", "ConqueTerm")
 
 let NERDTreeShowHidden=1
 
 map <C-e> <plug>NERDTreeTabsToggle<CR>
 " map <C-e> :NERDTreeTabsToggle<CR>
 
+nmap Ol :TagbarToggle<CR>
+imap Ol :TagbarToggle<CR>i
+
+" jk tip + save
+imap jk <Esc>:w<CR>
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
