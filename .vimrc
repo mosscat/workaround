@@ -88,6 +88,7 @@ set backspace=indent,eol,start
 set nobackup		" do not keep a backup file, use versions instead
 set nowb
 set noswapfile
+set nowrap
 
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
@@ -249,7 +250,6 @@ endfunction
 
 function! SetupForCLang()
     setlocal textwidth=120
-    setlocal wrap
     setlocal shiftwidth=4
     setlocal tabstop=4
     ab #b /***************************************
