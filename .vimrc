@@ -48,6 +48,29 @@ call CmdAlias( "W", "w")
 call CmdAlias( "Q", "q")
 call CmdAlias( "ct", "ConqueTerm")
 
+function! CleanClose(tosave)
+    if (a:tosave == 1)
+        w!
+    endif
+    
+    let todelbufNr = bufnr("%")
+    let newbufNr = bufnr("#")
+
+    if ((newbufNr != -1) && (newbufNr != todelbufNr) && buflisted(newbufNr))
+        exe "b".newbufNr
+    else
+        bnext
+    endif
+
+    if (bufnr("%") == todelbufNr)
+        new
+    endif
+    
+    exe "bd".todelbufNr
+endfunction
+
+map  :call CleanClose(0)<cr>
+
 let NERDTreeShowHidden=1
 
 map <C-e> <plug>NERDTreeTabsToggle<CR>
