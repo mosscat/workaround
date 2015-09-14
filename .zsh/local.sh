@@ -8,7 +8,6 @@ if [ -f /usr/bin/grc ]; then
     alias conf="grc --colour=auto ./configure "
     alias gcc="grc --colour=auto gcc "
     alias g++="grc --colour=auto g++ "
-    alias make="grc --colour=auto make "
     alias diff="grc --colour=auto diff "
     alias wdiff="grc --colour=auto wdiff "
     alias mount="grc --colour=auto mount "
