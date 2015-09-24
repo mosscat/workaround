@@ -3,4 +3,7 @@ hardstatus alwayslastline '%{= kg}[ %{G}%H %{g}][%= %{= kB}%?%-Lw%?%{+b r}(%{G}%
 bindkey ^[[1;6C next
 bindkey ^[[1;6D prev
 
+vbell off
+bell_msg ""
+
 defscrollback 10000
