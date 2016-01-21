@@ -30,6 +30,7 @@ Plugin 'bling/vim-airline'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'scrooloose/nerdcommenter'
 
 Plugin 'sjl/gundo.vim'
 
@@ -98,6 +99,8 @@ set incsearch		" do incremental searching
 " Don't use Ex mode, use Q for formatting
 map Q gq
 inoremap <C-U> <C-G>u<C-U>
+
+filetype plugin on
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
@@ -196,6 +199,8 @@ let g:nerdtree_tabs_open_on_console_startup = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tab_type = 1
 let g:airline#extensions#tabline#buffer_idx_mode = 1
+
+let leader = exists('g:mapleader') ? g:mapleader : '\'
 
 set laststatus=2
 
